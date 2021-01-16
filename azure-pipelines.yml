@@ -12,6 +12,12 @@ pool:
 variables:
   buildConfiguration: 'Release'
 
+parameters:
+- name: experimentalTemplate
+  displayName: 'Use experimental build process?'
+  type: boolean
+  default: false
+
 steps:
 - script: dotnet build --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
